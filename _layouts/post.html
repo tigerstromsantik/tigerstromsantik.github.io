@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<div class="post">
+
+<table class="article" ceppspacing="0" cellpadding="0">
+<tr>
+	<td width="360" valign="top">
+
+		{% if page.images %}
+		<div class="image">
+			<div class="thumb-m" style="background-image:url({{ page.images[0] }})" />
+		</div>
+		<table class="gallery">
+		<tr>
+			{% for img in page.images %}
+			<td><div class="thumb-s" style="background-image: url({{ img }});"> </div></td>
+		    {% endfor %}
+		</tr>
+		</table>
+		{% endif %}
+
+
+	</td>
+	<td valign="top" align="left" class="desc">
+
+		{{ page.date | date_to_string }}
+		<h2>{{ page.title }}</h2>
+
+
+ 		{{ content }} 
+
+		{% if page.dimensions %}
+		<p class="data"><b>Storlek</b>&nbsp; {{ page.dimensions }}</p>
+		{% endif %}
+
+		{% if page.sold %}
+		<em class="tag">SOLD</em>
+		{% endif %}
+
+	
+
+	</td>
+</tr>
+</table>
+
+</div>

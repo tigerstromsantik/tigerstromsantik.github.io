@@ -1,0 +1,32 @@
+---
+layout: default
+title: Tigerström Konst & Antik
+---
+
+<h2>Välkommen</h2>
+<p>Hej och välkommen till Tigerströms Konst & Antik som är en liten antikbutik i Åseda.</p>
+
+<div id="store-image" ></div>
+
+	<h3>Furniture</h3>
+  <ul class="posts">
+    {% for post in site.posts %}
+	{% if post.groups contains 'furniture' %}
+      <li>
+		<span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+	  </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+
+	<h3>Available</h3>
+  <ul class="posts">
+    {% for post in site.posts %}
+	{% unless post.sold %}
+      <li>
+		<span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+	  </li>
+    {% endunless %}
+    {% endfor %}
+  </ul>
+

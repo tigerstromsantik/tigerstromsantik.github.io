@@ -1,0 +1,37 @@
+@import url(http://fonts.googleapis.com/css?family=Molengo);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+
+html { height: 100%; background-color: #A6A496; background-image: url(../assets/img/noise.png); } 
+body { background-color: white; width: 840px; margin: 0 auto; padding: 0; height: 100%; position: relative; }
+h1 { font-size: 28px; color: black; font-family: "Gentium Book Basic", Lora, serif; margin: 0; text-align: center; text-transform:uppercase; font-weight: normal; border: 2px groove #777; background-color: white; display: inline-block; width: 220px; margin: 15px; }
+h1 a { text-decoration: none; }
+h1 a:visited { color: black; }
+h3 { font-size: 20px; padding: 0; font-weight: normal; font-family: "Gentium Book Basic", serif; }
+h2 { font-size: 18px; font-family: "Gentium Book Basic", serif;  }
+
+.header { padding: 15px; }
+
+#footer { color: #888; font-size: small; font-family: Molengo, sans-serif; padding: 5px 0 20px 0; }
+#footer img { float: left; margin-right: 10px; }
+
+.article { width: 100%; border-spacing: 0; padding-top: 30px; }
+
+.desc { font-family: Lora, sans-serif; font-size: 0.9em; }
+.desc h2 { font-weight: bold; margin-top: 0; }
+.desc p { font-weight: 300; }
+
+.info h4 { display: block; margin: 0; padding: 0;}
+.info { font-size: 80%; font-family: "Gentium Book Basic", serif; }
+.info th { text-align: left; padding-right: 1em; color: #444; }
+
+.data { font-family: Molengo; }
+.tag { color: IndianRed; font-family: Molengo; font-style: normal; font-weight: bold; }
+
+#content { padding: 0 30px; margin-left: 255px; position: absolute; min-height: 100%; }
+#menu { background-color: #F3E89E; width: 254px; position: fixed; height: 100%; z-index:2; background-image: url(../assets/img/noise.png); }
+#contact, #footer { bottom: 0; position: absolute; line-height: 1.4em; }
+#footer { background-color: white; }
+
+#store-image { background-image: url(http://tigerstromsantik.se/wp-content/uploads/2012/08/cropped-cover2.jpg); width: 584px; height: 280px; margin: 0 -30px; }
+
