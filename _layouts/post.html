@@ -3,46 +3,29 @@ layout: default
 ---
 
 <div class="post">
+		<h1>{{ page.title }}</h1>
 
-<table class="article" ceppspacing="0" cellpadding="0">
-<tr>
-	<td width="360" valign="top">
 
-		{% if page.images %}
-		<div class="image">
-			<div class="thumb-m" style="background-image:url({{ page.images[0] }})" />
+		{% if page.image %}
+		<img src="{{ page.image }}" class="thumb" alt="{{ page.title }}" />
+		{% endif %}
+
+		<div class="article desc">
+			<p>{{ page.description }}</p>
+
+			{% if page.dimensions %}
+			<p class="data"><b>Storlek</b>&nbsp; {{ page.dimensions }}</p>
+			{% endif %}
+
+			{% if page.sold %}
+			<em class="tag">SOLD</em><br/>
+			{% endif %}
+
+			<p class="date">{{ page.date | date_to_string }}</p>
 		</div>
-		<table class="gallery">
-		<tr>
-			{% for img in page.images %}
-			<td><div class="thumb-s" style="background-image: url({{ img }});"> </div></td>
-		    {% endfor %}
-		</tr>
-		</table>
-		{% endif %}
-
-
-	</td>
-	<td valign="top" align="left" class="desc">
-
-		{{ page.date | date_to_string }}
-		<h2>{{ page.title }}</h2>
-
-
- 		{{ content }} 
-
-		{% if page.dimensions %}
-		<p class="data"><b>Storlek</b>&nbsp; {{ page.dimensions }}</p>
-		{% endif %}
-
-		{% if page.sold %}
-		<em class="tag">SOLD</em>
-		{% endif %}
-
 	
-
-	</td>
-</tr>
-</table>
+		<div class="details">
+		{{ content }} 
+		</div>
 
 </div>

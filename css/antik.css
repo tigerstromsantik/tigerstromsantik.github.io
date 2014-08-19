@@ -4,18 +4,19 @@
 
 html { height: 100%; background-color: #A6A496; background-image: url(../assets/img/noise.png); } 
 body { background-color: white; width: 840px; margin: 0 auto; padding: 0; height: 100%; position: relative; }
-h1 { font-size: 28px; color: black; font-family: "Gentium Book Basic", Lora, serif; margin: 0; text-align: center; text-transform:uppercase; font-weight: normal; border: 2px groove #777; background-color: white; display: inline-block; width: 220px; margin: 15px; }
-h1 a { text-decoration: none; }
-h1 a:visited { color: black; }
-h3 { font-size: 20px; padding: 0; font-weight: normal; font-family: "Gentium Book Basic", serif; }
-h2 { font-size: 18px; font-family: "Gentium Book Basic", serif;  }
+h1#title { font-size: 28px; color: black; font-family: "Gentium Book Basic", Lora, serif; margin: 0; text-align: center; text-transform:uppercase; font-weight: normal; border: 2px groove #777; background-color: white; display: inline-block; width: 220px; margin: 15px; }
+h1#title a { text-decoration: none; }
+h1#title a:visited { color: black; }
+h1, h2, h3 { font-family: "Gentium Book Basic", serif; }
+h3 { font-size: 20px; padding: 0; font-weight: normal; }
+h2 { font-size: 18px; }
 
 .header { padding: 15px; }
 
 #footer { color: #888; font-size: small; font-family: Molengo, sans-serif; padding: 5px 0 20px 0; }
 #footer img { float: left; margin-right: 10px; }
 
-.article { width: 100%; border-spacing: 0; padding-top: 30px; }
+.post { margin-top: 50px; }
 
 .desc { font-family: Lora, sans-serif; font-size: 0.9em; }
 .desc h2 { font-weight: bold; margin-top: 0; }
@@ -35,3 +36,7 @@ h2 { font-size: 18px; font-family: "Gentium Book Basic", serif;  }
 
 #store-image { background-image: url(http://tigerstromsantik.se/wp-content/uploads/2012/08/cropped-cover2.jpg); width: 584px; height: 280px; margin: 0 -30px; }
 
+.thumb { width: 240px; border: 1px solid #ddd; float: left; margin-right: 15px; background-color: #F3E89E; }
+.article { width: 250px; display: inline-block; float: right; min-height: 250px; position: relative; }
+.details { clear: both; padding-top: 15px; }
+.date { bottom: 0; position: absolute; }
