@@ -3,7 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
 
 html { height: 100%; background-color: #A6A496; background-image: url(../assets/img/noise.png); } 
-body { background-color: white; width: 840px; margin: 0 auto; padding: 0; height: 100%; position: relative; }
+body { background-color: #FFFFF0; width: 840px; margin: 0 auto; padding: 0; height: 100%; position: relative; }
 h1#title { font-size: 28px; color: black; font-family: "Gentium Book Basic", Lora, serif; margin: 0; text-align: center; text-transform:uppercase; font-weight: normal; border: 2px groove #777; background-color: white; display: inline-block; width: 220px; margin: 15px; }
 h1#title a { text-decoration: none; }
 h1#title a:visited { color: black; }
@@ -32,11 +32,11 @@ h2 { font-size: 18px; }
 #content { padding: 0 30px; margin-left: 255px; position: absolute; min-height: 100%; }
 #menu { background-color: #F3E89E; width: 254px; position: fixed; height: 100%; z-index:2; background-image: url(../assets/img/noise.png); }
 #contact, #footer { bottom: 0; position: absolute; line-height: 1.4em; }
-#footer { background-color: white; }
+#footer { background-color: #FFFFF0; }
 
 #store-image { background-image: url(http://tigerstromsantik.se/wp-content/uploads/2012/08/cropped-cover2.jpg); width: 584px; height: 280px; margin: 0 -30px; }
 
-.thumb { width: 240px; border: 1px solid #ddd; float: left; margin-right: 15px; background-color: #F3E89E; }
+.thumb { width: 240px; border: 1px solid #ddddd0; float: left; margin-right: 15px; background-color: #F3E89E; }
 .article { width: 250px; display: inline-block; float: right; min-height: 250px; position: relative; }
 .details { clear: both; padding-top: 15px; }
 .date { bottom: 0; position: absolute; }
