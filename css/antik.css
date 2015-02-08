@@ -1,42 +1,54 @@
 @import url(http://fonts.googleapis.com/css?family=Molengo);
 @import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700,700italic);
-@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400italic,400,700italic,700);
+@import url(http://fonts.googleapis.com/css?family=Quattrocento:400,700);
 
-html { height: 100%; background-color: #A6A496; background-image: url(../assets/img/noise.png); } 
-body { background-color: #FFFFF0; width: 840px; margin: 0 auto; padding: 0; height: 100%; position: relative; }
-h1#title { font-size: 28px; color: black; font-family: "Gentium Book Basic", Lora, serif; margin: 0; text-align: center; text-transform:uppercase; font-weight: normal; border: 2px groove #777; background-color: white; display: inline-block; width: 220px; margin: 15px; }
+html {
+	height: 100%; 
+	/* background-color: #D9D0AD; background-image: linear-gradient(#D9D0AD, #E0D7B4); */
+}
+body { max-width: 800px; margin: 0 auto; font-family: "Quattrocento Sans"; }
+
+h1, h2, h3, h4, h5, .categories, #footer, #menu { font-family: Quattrocento, "Gentium Book Basic", serif; }
+
+h1#title { font-size: 48px; margin: 0 auto 10px auto; text-align: center; text-transform:uppercase; font-weight: normal; padding: 20px 0 10px 0; border-bottom: 3px solid black; }
 h1#title a { text-decoration: none; }
 h1#title a:visited { color: black; }
-h1, h2, h3 { font-family: "Gentium Book Basic", serif; }
-h3 { font-size: 20px; padding: 0; font-weight: normal; }
-h2 { font-size: 18px; }
+h1 { font-size: 19px; font-size: 0.75cm; font-weight: normal; }
+h2 { margin: 0.3em 0; }
+h4 { margin: 0.1em 0; }
+h5 { font-size: 120%; margin: 0; padding: 5px 1em; text-align: center; }
 
-.header { padding: 15px; }
+#menu { margin-bottom: 1cm; font-weight: bold; text-align: center; }
+#menu a { color: black; text-decoration: none; }
+#footer {	border-top: 1px solid white; padding: 1em 0; margin: 0.5cm 0; text-align: center; line-height: 1.6em; }
 
-#footer { color: #888; font-size: small; font-family: Molengo, sans-serif; padding: 5px 0 20px 0; }
-#footer img { float: left; margin-right: 10px; }
+#article { width: 100%; border-collapse: collapse; }
+#article td { padding: 10px; }
 
-.post { margin-top: 50px; }
+.categories { margin: 1cm auto 0 auto; color: white; font-weight: 400; text-align: center; font-size: 1cm; text-shadow: 2px 2px 2px rgba(50, 50, 50, 0.7); }
+.categories td { height: 250px; width: 250px; background-position: center; background-repeat: no-repeat; }
+.categories a { color: white; text-decoration: none; }
 
-.desc { font-family: Lora, sans-serif; font-size: 0.9em; }
-.desc h2 { font-weight: bold; margin-top: 0; }
-.desc p { font-weight: 300; }
+.thumb { border: 1px solid white; margin: 5px 5px 0 0; }
 
-.info h4 { display: block; margin: 0; padding: 0;}
-.info { font-size: 80%; font-family: "Gentium Book Basic", serif; }
-.info th { text-align: left; padding-right: 1em; color: #444; }
+.gul { background-color: #eed58c; border: 0px solid #D9D0AD; } /* F0E6C5; */
+.gul h2 { color: #725d2b; }
+.turkos { background-color: #bcd0c6; border: 0px solid #D9D0AD; } /* F0E6C5; */
+.turkos h2 { color: #2d3734; }
+.rosa { background-color: #EDD8D9; }
+.rosa h2 { color: #806668; }
 
-.data { font-family: Molengo; }
-.tag { color: IndianRed; font-family: Molengo; font-style: normal; font-weight: bold; }
+#list h2 { letter-spacing: 0.1em;  text-transform: uppercase; text-align: center; font-size: 1cm; font-weight: normal;  }
 
-#content { padding: 0 30px; margin-left: 255px; position: absolute; min-height: 100%; }
-#menu { background-color: #F3E89E; width: 254px; position: fixed; height: 100%; z-index:2; background-image: url(../assets/img/noise.png); }
-#contact, #footer { bottom: 0; position: absolute; line-height: 1.4em; }
-#footer { background-color: #FFFFF0; }
+#query { font-size: 110%; border: 1px solid #ccc; padding: 2px 4px; border-right-width: 0; }
+#dosearch { font-size: 110%; }
+#searchbox { float:right; }
 
-#store-image { background-image: url(http://tigerstromsantik.se/wp-content/uploads/2012/08/cropped-cover2.jpg); width: 584px; height: 280px; margin: 0 -30px; }
+input {margin: 0;}
+.match {width: 250px; padding: 5px; margin-bottom: 10px; display: inline-block; }
+.match img {border: 1px solid white; }
 
-.thumb { width: 240px; border: 1px solid #ddddd0; float: left; margin-right: 15px; background-color: #F3E89E; }
-.article { width: 250px; display: inline-block; float: right; min-height: 250px; position: relative; }
-.details { clear: both; padding-top: 15px; }
-.date { bottom: 0; position: absolute; }
+a.img, a.img:visited { text-decoration: none; color: black; }
+
+#matches1, #matches2, #matches3 { }

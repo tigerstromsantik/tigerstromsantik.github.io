@@ -1,16 +1,21 @@
 ---
 layout: post
-title:  "Afrikansk Mask"
-date:   2014-01-25 12:11:33
-categories: jekyll update
+title:  "Rare Jacobsen Desk Chair"
 
+ref: FJ01
+
+categories: möbler
+theme: turkos
 sold: yes
 article: cabinet
+designer: Finn Juhl
+year: 1950
 groups: [furniture, möbel]
-images: [/assets/img/big.jpg,/assets/img/thumb1.png,/assets/img/thumb2.png,/assets/img/thumb3.png,/assets/img/thumb4.png]
-image: http://www.amuletten.net/2808-thickbox/afrikansk-mask-fjaril.jpg
 dimensions: 70.0 cm x 45.0 cm x 75.0 cm
-description: Ett exemplar av en afrikansk mask max. Höjd 40 cm
+
+image: http://www.modernity.se/images/2.194842/the-chair-designed-by-hans-wegner-for-johannes-han.jpeg
+
+collection: ST01 ST02
 ---
 
-Detail descriptions
+A short text describing the object...

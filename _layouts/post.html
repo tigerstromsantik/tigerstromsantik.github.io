@@ -2,16 +2,29 @@
 layout: default
 ---
 
-<div class="post">
-		<h1>{{ page.title }}</h1>
+<table border="0" cellpadding="15" cellspacing="0" width="100%" id="object">
+	<tr>
+		<td class="{{ page.theme }}" width="85%" valign="top">
+			<h2>{{ page.title }}</h2>
 
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+			{% if page.image %}
+				<td valign="top" rowspan="2" width="275">
+					<img src="{{ page.image }}" class="thumb" alt="{{ page.title }}" width="250" />
+				</td>
+			{% endif %}
 
-		{% if page.image %}
-		<img src="{{ page.image }}" class="thumb" alt="{{ page.title }}" />
-		{% endif %}
-
-		<div class="article desc">
-			<p>{{ page.description }}</p>
+				<td valign="top">
+			{% if page.designer %}
+			<p class="designer">{{ page.designer }}</p>
+			{% endif %}
+			{% if page.year %}
+			<p class="year">{{ page.year }}</p>
+			{% endif %}
+			{% if page.ref %}
+			<p class="ref">{{ page.ref }}</p>
+			{% endif %}
 
 			{% if page.dimensions %}
 			<p class="data"><b>Storlek</b>&nbsp; {{ page.dimensions }}</p>
@@ -22,10 +35,30 @@ layout: default
 			{% endif %}
 
 			<p class="date">{{ page.date | date_to_string }}</p>
-		</div>
-	
-		<div class="details">
-		{{ content }} 
-		</div>
+  			</td>
+			</tr>
+			<tr>
+				<td valign="bottom">
+					{{ content }}	
+				</td>
+			</tr>
+			</table>
 
-</div>
+			<!-- more images below and possible 2nd under main image -->
+
+		</td>
+		<td valign="top" id="seealso">
+			{% if page.collection %}
+			{% for item in site.posts %}
+			{% if page.collection contains item.ref %}
+			<a href="{{ item.url }}" class="img">
+			<h4>{{ item.title }}</h4>
+			<img src="{{ item.image }}" class="thumb" width="125" height="125" />
+			</a>
+			{% endif %}
+			{% endfor %}
+			{% endif %}
+		</td>
+	</tr>
+</table>
+

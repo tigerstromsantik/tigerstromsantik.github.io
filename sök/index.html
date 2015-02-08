@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+<center>
+<input type="text" id="query" /><input type="button" value="hitta" id="dosearch" />
+<br/><br/>
+</center>
+
+<div id="matches"></div>
+
+<noscript>This search requires javascript!</noscript>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+$("#query").keypress(function (e) {
+  if (e.which == 13) {
+		search(e.target.value)
+    return false;
+  }
+});
+$("#dosearch").click(function(e) {
+	search($("#query").val());
+});
+
+init();
+
+function init() {
+  var q = $("#query");
+	if (q.val() != "") {
+		search(q.val());
+	} else {
+		q.focus();
+	}
+}
+
+/* Lazy loading of data, once loaded it is reused! */
+var searchdata;
+
+function search(query) {
+	if (searchdata) {
+		render(query, searchdata);
+	} else {
+		$.ajaxSetup({ scriptCharset: "utf-8" , contentType: "application/json; charset=utf-8"});
+		$.getJSON('/search.json', function(data) {
+			render(query, data);
+		});
+	}
+}
+
+function render(query, data) {
+	searchdata = data;
+	var hits = $("#matches");
+	hits.empty();
+	hits.append("<table cellspacing='0' cellpadding='5'><tr><td id='matches1' valign='top'></td><td id='matches2' valign='top'></td><td id='matches3' valign='top'></td></tr></table>");
+	var hitColumns = [ $("#matches1"), $("#matches2"), $("#matches3") ];
+	var match = 0;	
+	$(data).each(function(idx, item) {
+		if (item.title.search(new RegExp(query, "i")) >= 0) {
+				hitColumns[match % 3].append("<a href='"+decodeURIComponent(item.url)+"' class='img match "+ item.theme +"'><h4>" + item.title +"</h4><img src='" + item.image+ "' width='250' /></a>");
+				match+=1;
+		}
+	});
+}
+</script>
+
+
