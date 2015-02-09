@@ -8,7 +8,7 @@ layout: default
 <h2>{{page.category}}</h2>
 
 {% assign counter = 0 %}
-<table>
+<table width="100%" cellspacing="0" cellpadding="4">
 <tr>
 {% for post in site.posts %}
 {% if post.categories contains page.category %}
