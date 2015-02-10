@@ -12,16 +12,18 @@ layout: default
 <tr>
 {% for post in site.posts %}
 {% if post.categories contains page.category %}
-{% assign counter = counter | plus: 1 %}
-{% assign cmod = counter | modulo:3 %}
-<td>
-{{ post.title }}<br/>
-<a href="{{ post.url }}"><img src="{{ post.image }}" class="thumb" alt="{{ post.title }}" width="250" height="250" /></a>
+  {% unless post.sold %}
+    {% assign counter = counter | plus: 1 %}
+    {% assign cmod = counter | modulo:3 %}
+<td valign="top">
+<h4>{{ post.title }}</h4>
+<a href="{{ post.url }}"><img src="{{ post.image | replace_first: '/upload/', '/upload/w_250,h_250,c_pad,f_png/' }}" class="thumb" alt="{{ post.title }}" width="250" /></a>
 </td>
-{% if cmod == 0 %}
+    {% if cmod == 0 %}
 </tr>
 <tr>
-{% endif %}
+    {% endif %}
+  {% endunless %}
 {% endif %}
 {% endfor %}
 

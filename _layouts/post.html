@@ -11,7 +11,7 @@ layout: default
 			<tr>
 			{% if page.image %}
 				<td valign="top" width="275">
-					<img src="{{ page.image }}" class="thumb" alt="{{ page.title }}" width="250" />
+					<a href="{{ page.image }}"><img src="{{ page.image | replace_first: '/upload/', '/upload/w_250/' }}" class="thumb" alt="{{ page.title }}" width="250" /></a>
 				</td>
 			{% endif %}
 
@@ -61,14 +61,14 @@ layout: default
 		</td>
 		<td valign="top" id="seealso">
 			{% if page.collection %}
-			{% for item in site.posts %}
-			{% if page.collection contains item.ref %}
+			  {% for item in site.posts %}
+			    {% if page.collection contains item.ref %}
 			<a href="{{ item.url }}" class="img">
 			<h4>{{ item.title }}</h4>
-			<img src="{{ item.image }}" class="thumb" width="125" height="125" />
+			<img src="{{ item.image | replace_first: '/upload/', '/upload/w_125/' }}" class="thumb" width="125" />
 			</a>
-			{% endif %}
-			{% endfor %}
+			    {% endif %}
+			  {% endfor %}
 			{% endif %}
 		</td>
 	</tr>

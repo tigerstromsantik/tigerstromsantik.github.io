@@ -56,7 +56,7 @@ function render(query, data) {
 	var match = 0;	
 	$(data).each(function(idx, item) {
 		if (item.title.search(new RegExp(query, "i")) >= 0) {
-				hitColumns[match % 3].append("<a href='"+decodeURIComponent(item.url)+"' class='img match "+ item.theme +"'><h4>" + item.title +"</h4><img src='" + item.image+ "' width='250' /></a>");
+				hitColumns[match % 3].append("<a href='"+decodeURIComponent(item.url)+"' class='img match "+ item.theme +"'><h4>" + item.title +"</h4><img src='" + item.image.replace("/upload/", "/upload/w_250/") + "' width='250' /></a>");
 				match+=1;
 		}
 	});

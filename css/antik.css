@@ -2,6 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400italic,400,700italic,700);
 @import url(http://fonts.googleapis.com/css?family=Quattrocento:400,700);
+@import url(http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911);
 
 html {
 	height: 100%; 
@@ -9,14 +10,14 @@ html {
 }
 body { max-width: 800px; margin: 0 auto; font-family: "Quattrocento Sans"; }
 
-h1, h2, h3, h4, h5, .categories, #footer, #menu { font-family: Quattrocento, "Gentium Book Basic", serif; }
+h1, h2, h3, h4, h5, .categories, #footer, #menu { font-family: "Goudy Bookletter 1911", Quattrocento, "Gentium Book Basic", serif; }
 
 h1#title { font-size: 48px; margin: 0 auto 10px auto; text-align: center; text-transform:uppercase; font-weight: normal; padding: 20px 0 10px 0; border-bottom: 3px solid black; }
 h1#title a { text-decoration: none; }
 h1#title a:visited { color: black; }
 h1 { font-size: 19px; font-size: 0.75cm; font-weight: normal; }
 h2 { margin: 0.3em 0; }
-h4 { margin: 0.1em 0; }
+h4 { margin: 0.1em 0; font-weight: normal; }
 h5 { font-size: 120%; margin: 0; padding: 5px 1em; text-align: center; }
 
 #menu { margin-bottom: 1cm; text-align: center; }
@@ -27,14 +28,20 @@ h5 { font-size: 120%; margin: 0; padding: 5px 1em; text-align: center; }
 .categories td { height: 250px; width: 250px; background-position: center; background-repeat: no-repeat; }
 .categories a { color: white; text-decoration: none; }
 
-.thumb { border: 1px solid white; }
+.thumb { padding: 3px; }
 
 .gul { background-color: #eed58c; border: 0px solid #D9D0AD; } /* F0E6C5; */
 .gul h2 { color: #725d2b; }
+.gul .thumb { background-color: #e2c780; }
 .turkos { background-color: #bcd0c6; border: 0px solid #D9D0AD; } /* F0E6C5; */
 .turkos h2 { color: #2d3734; }
+.turkos .thumb { background-color: #acc0b6; }
 .rosa { background-color: #EDD8D9; }
 .rosa h2 { color: #806668; }
+.rosa .thumb { background-color: #E5D0D1; }
+.gra { background-color: #43403b; }
+.gra h2, .gra h4 { color: white; }
+.gra .thumb { background-color: #33302b; }
 
 #list h2 { letter-spacing: 0.1em;  text-transform: uppercase; text-align: center; font-size: 1cm; font-weight: normal;  }
 

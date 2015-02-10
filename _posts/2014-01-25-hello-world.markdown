@@ -5,8 +5,8 @@ title:  "Title"
 ref: FJ01
 
 categories: möbler
-theme: turkos
-sold: yes
+theme: gul
+sold: no
 article: cabinet
 designer: Mr. X
 year: 1950
@@ -15,7 +15,7 @@ dimensions: 70.0 cm x 45.0 cm x 75.0 cm
 
 image: http://res.cloudinary.com/tigerstromsantik/image/upload/w_250/v1423508157/Snedklaff_2_zhmsxx.jpg
 
-collection: ST01 ST02
+ccollection: ST01 ST02
 
 images:
  - { url: "http://res.cloudinary.com/tigerstromsantik/image/upload/v1423508157/Snedklaff_2_zhmsxx.jpg" }
