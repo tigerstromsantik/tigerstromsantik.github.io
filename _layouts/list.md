@@ -28,12 +28,12 @@ layout: default
 {% endfor %}
 
 {% if cmod != 0 %}
-<td></td>
+<td width="33%"></td>
 {% assign counter = counter | plus: 1 %}
 {% assign cmod = counter | modulo:3 %}
 {% endif %}
 {% if cmod != 0 %}
-<td></td>
+<td width="33%"></td>
 {% endif %}
 </tr>
 </table>
