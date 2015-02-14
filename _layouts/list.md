@@ -2,39 +2,34 @@
 layout: default
 ---
 
+<h2 class="category">{{page.category | join: ' &amp; ' }}</h2>
+
 {{ content }} 
 
-<div id="list" class="{{ page.theme }}" style="padding: 10px; ">
-<h2>{{page.category}}</h2>
+<br/>
+{% for period in page.periods %}
+<h3 class="period">{% if period != "?" %}{{period}}{% else %}okänt{% endif %}</h3>
 
-{% assign counter = 0 %}
-<table width="100%" cellspacing="0" cellpadding="4">
-<tr>
+<table class="list">
 {% for post in site.posts %}
-{% if post.categories contains page.category %}
-  {% unless post.sold %}
-    {% assign counter = counter | plus: 1 %}
-    {% assign cmod = counter | modulo:3 %}
-<td valign="top">
-<h4>{{ post.title }}</h4>
-<a href="{{ post.url }}"><img src="{{ post.image | replace_first: '/upload/', '/upload/w_250,h_250,c_pad,f_png/' }}" class="thumb" alt="{{ post.title }}" width="250" /></a>
-</td>
-    {% if cmod == 0 %}
-</tr>
-<tr>
-    {% endif %}
+ {% if page.category contains post.item.kind and (post.item.decade == period or (period == "?" and post.item.decade == null )) %}
+  {% unless post.item.sold %}
+  <tr>
+    <td valign="top" width="350" class="img" rowspan="2">
+      <a href="{{ post.url }}"><img src="{{ post.item.image | replace_first: '/upload/', '/upload/w_300,h_300,c_fit/' }}" alt="{{ post.title }}" /></a>
+    </td>
+    <td valign="top" width="300">
+      <h4>{{ post.title }}</h4>
+		</td>
+  </tr>
+	<tr valign="bottom">
+		<td class="itemtext">
+      {{ post.content }}
+		</td>
+	</tr>
   {% endunless %}
-{% endif %}
+ {% endif %}
+{% endfor %}
+</table>
 {% endfor %}
 
-{% if cmod != 0 %}
-<td width="33%"></td>
-{% assign counter = counter | plus: 1 %}
-{% assign cmod = counter | modulo:3 %}
-{% endif %}
-{% if cmod != 0 %}
-<td width="33%"></td>
-{% endif %}
-</tr>
-</table>
-</div>

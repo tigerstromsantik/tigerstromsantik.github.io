@@ -1,7 +1,7 @@
 ---
 layout: list
 title: Möbler
-category: möbler
-theme: gul
+category: [möbler, speglar]
+periods: ["?"]
 ---
 

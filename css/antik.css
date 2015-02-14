@@ -4,34 +4,34 @@
 @import url(http://fonts.googleapis.com/css?family=Quattrocento:400,700);
 @import url(http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911);
 @import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=La+Belle+Aurore);
+@import url(http://fonts.googleapis.com/css?family=Habibi);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,400italic);
 
 html {
 	height: 100%; 
 	/* background-color: #D9D0AD; background-image: linear-gradient(#D9D0AD, #E0D7B4); */
 }
-body { max-width: 800px; margin: 0 auto; font-family: "Quattrocento Sans"; }
+body { max-width: 800px; margin: 0 auto; font-family: "Josefin Sans"; }
 
-h1, h2, h3, h4, h5, .categories { font-family: "Goudy Bookletter 1911", Quattrocento, "Gentium Book Basic", serif; }
-#footer, #menu { font-family: "Libre Baskerville", serif; }
+h1, .categories { font-family: "Goudy Bookletter 1911", Quattrocento, "Gentium Book Basic", serif; }
+h2, h3, h4 { font-family: "Libre Baskerville"; text-transform:uppercase; font-weight: normal; }
 
-
-h1#title { font-size: 48px; margin: 0 auto 10px auto; text-align: center; text-transform:uppercase; font-weight: normal; padding: 20px 0 10px 0; border-bottom: 3px solid black; }
+h1#title { font-size: 42px; margin: 0 auto 0 auto; text-align: center; text-transform:uppercase; font-weight: normal; padding: 20px 0 10px 0; border-bottom: 6px solid #AB4B52; }
 h1#title a { text-decoration: none; }
 h1#title a:visited { color: black; }
 h1 { font-size: 19px; font-size: 0.75cm; font-weight: normal; }
-h2 { margin: 0.3em 0; }
-h4 { margin: 0.1em 0; font-weight: normal; }
+h2 { margin: 0.3em 0; font-size: 18px; }
+h3 { margin: 0.3em 0 1em 0; font-size: 16px;  color: #AB4B52; }
+h3 i { text-transform: none; }
+h4 { margin: 0.1em 0 1em 0; font-size: 15px; }
 h5 { font-size: 120%; margin: 0; padding: 5px 1em; text-align: center; }
 
-#menu { margin-bottom: 1cm; text-align: center; }
-#menu a { color: black; text-decoration: none; }
-#footer {	border-top: 1px solid white; padding: 1em 0; margin: 0.5cm 0; text-align: center; line-height: 1.6em; }
+#footer {	border-top: 1px solid white; padding: 1em 0; margin: 50px 0 0.5cm 0; text-align: center; line-height: 1.6em; border-top: 1px solid black; }
 
 .categories { margin: 1cm auto 0 auto; color: white; font-weight: 400; text-align: center; font-size: 1cm; text-shadow: 2px 2px 2px rgba(50, 50, 50, 0.7); }
 .categories td { height: 250px; width: 250px; background-position: center; background-repeat: no-repeat; }
 .categories a { color: white; text-decoration: none; }
-
-.thumb { padding: 3px; }
 
 .gul { background-color: #eed58c; border: 0px solid #D9D0AD; } /* F0E6C5; */
 .gul h2 { color: #725d2b; }
@@ -39,12 +39,14 @@ h5 { font-size: 120%; margin: 0; padding: 5px 1em; text-align: center; }
 .turkos { background-color: #bcd0c6; border: 0px solid #D9D0AD; } /* F0E6C5; */
 .turkos h2 { color: #2d3734; }
 .turkos .thumb { background-color: #acc0b6; }
-.rosa { background-color: #EDD8D9; }
+.rosa { background-color: #EDD8D9; background-image: url(http://sandbergwallpaper.se/wp-content/uploads/2014/12/780-09_image2.jpg); }
 .rosa h2 { color: #806668; }
 .rosa .thumb { background-color: #E5D0D1; }
 
-#list h2 { letter-spacing: 0.1em;  text-transform: uppercase; text-align: center; font-size: 1cm; font-weight: normal;  }
+h2.category { float: right; width: 180px; text-align: center; background-color: #AB4B52; color: white; margin-top: 0; font-size: 20px; }
+h2.category a, h2.category a:visited { text-decoration: none; color: white; }
 
+/* search view */
 #query { font-size: 110%; border: 1px solid #ccc; padding: 2px 4px; border-right-width: 0; }
 #dosearch { font-size: 110%; }
 #searchbox { float:right; }
@@ -53,4 +55,28 @@ input {margin: 0;}
 .match {width: 250px; padding: 5px; margin-bottom: 10px; display: inline-block; }
 .match img {border: 1px solid white; }
 
+
 a.img, a.img:visited { text-decoration: none; color: black; }
+
+/* list view */
+h3.period { margin: 0; text-transform: none;  clear: right; }
+table.list { border-left: 3px solid #b78727; margin-left: 20px; border-spacing: 30px 50px; }
+table.list .img { text-align: right; }
+
+/* item view */
+#item { margin-top: 50px; clear: right; }
+.imgtext { padding-bottom: 1em; font-family: "Libre Baskerville"; font-size: 13px; }
+.line b { color: #AB4B52; }
+.line { border-bottom: 1px solid black; }
+.even { text-align: right; }
+.images { border-width: 0; border-spacing: 10px 50px;  }
+
+.itemtext { font-family: "Libre Baskerville"; font-size: 13px; padding-right: 2em; }
+.itemtext p { text-align: justify; }
+.itemtext p:first-child { margin-top: 0; }
+
+.price { font-size: 15px; float: right; }
+.sold { color: #AB4B52; }
+#more { text-align: center; }
+#more h3 { border-bottom: 1px solid black; }
+

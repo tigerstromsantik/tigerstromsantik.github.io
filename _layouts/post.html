@@ -2,75 +2,99 @@
 layout: default
 ---
 
-<table border="0" cellpadding="15" cellspacing="0" width="100%" id="object">
+<h2 class="category"><a href="/{{page.item.kind}}/">{{page.item.kind}}</a></h2>
+<table border="0" cellpadding="5" cellspacing="0" id="item">
 	<tr>
-		<td class="{{ page.theme }}" width="600" valign="top">
-			<h2>{{ page.title }}</h2>
-
-			<table border="0" cellpadding="0" cellspacing="0" width="100%">
-			<tr>
-			{% if page.image %}
-				<td valign="top" width="275">
-					<a href="{{ page.image }}"><img src="{{ page.image | replace_first: '/upload/', '/upload/w_250/' }}" class="thumb" alt="{{ page.title }}" width="250" /></a>
-				</td>
-			{% endif %}
-
-				<td valign="top">
-			{% if page.designer %}
-			<p class="designer">{{ page.designer }}</p>
-			{% endif %}
-			{% if page.year %}
-			<p class="year">{{ page.year }}</p>
-			{% endif %}
-			{% if page.ref %}
-			<p class="ref">{{ page.ref }}</p>
-			{% endif %}
-
-			{% if page.dimensions %}
-			<p class="data"><b>Storlek</b>&nbsp; {{ page.dimensions }}</p>
-			{% endif %}
-
-			{% if page.sold %}
-			<em class="tag">SOLD</em><br/>
-			{% endif %}
-
-			<p class="date">{{ page.date | date_to_string }}</p>
-  			</td>
-			</tr>
-			<tr>
-				{% if page.image %}
-				<td colspan="2">
-				{% else %}
-				<td>
-				{% endif %}
-					{{ content }}	
-				</td>
-			</tr>
-			</table>
-
-			{% if page.images %}
-			{% for image in page.images %}
-				<a href="{{image.url}}"><img src="{{ image.url | replace_first: '/upload/', '/upload/w_600/' }}" width="600" class="thumb" /></a>
-				{% if image.caption %}
-				{{ image.caption }}
-				{% endif %}
-			{% endfor %}
-			{% endif %}
-			<!-- more images below and possible 2nd under main image -->
-
+		<td width="600" valign="top" colspan="2">
+			<a href="{{ page.item.image }}"><img src="{{ page.item.image | replace_first: '/upload/', '/upload/w_600/' }}" alt="{{ page.title }}" width="600" /></a>
 		</td>
-		<td valign="top" id="seealso">
+		<td valign="top" rowspan="3" width="180" id="more">
+			<!-- More of the same artist/designer? -->
+			{% if page.item.artist %}
+				<h3><i>{{page.item.artist}}</i></h3>
+			  {% for post in site.posts %}
+			    {% if page.item.artist == post.item.artist and page.url != post.url %}
+			<a href="{{ post.url }}" class="img">
+			<img src="{{ post.item.image | replace_first: '/upload/', '/upload/w_150/' }}" class="thumb" width="150" />
+			<h4>{{ post.title }}</h4>
+			</a>
+			    {% endif %}
+			  {% endfor %}
+			{% endif %}
+
+			<!-- Part of a collection? Show others -->
 			{% if page.collection %}
-			  {% for item in site.posts %}
-			    {% if page.collection contains item.ref %}
-			<a href="{{ item.url }}" class="img">
-			<h4>{{ item.title }}</h4>
-			<img src="{{ item.image | replace_first: '/upload/', '/upload/w_125/' }}" class="thumb" width="125" />
+				<h3>se även</h3>
+			  {% for post in site.posts %}
+			    {% if page.collection contains post.item.ref %}
+			<a href="{{ post.url }}" class="img">
+			<img src="{{ post.item.image | replace_first: '/upload/', '/upload/w_150/' }}" class="thumb" width="150" />
+			<h4>{{ post.title }}</h4>
 			</a>
 			    {% endif %}
 			  {% endfor %}
 			{% endif %}
 		</td>
 	</tr>
+	<tr>
+		<td valign="top">
+			<h2>{{ page.title }}</h2>
+		</td>
+		<td rowspan="2" valign="top">
+			{% if page.item.designer %}
+			<p class="designer">{{ page.item.designer }}</p>
+			{% endif %}
+			{% if page.item.year %}
+			<p class="year">{{ page.item.year }}</p>
+			{% endif %}
+			{% if page.item.ref %}
+			<p class="ref">{{ page.item.ref }}</p>
+			{% endif %}
+
+			{% if page.item.dimensions %}
+			<p class="dimension"><b>Storlek</b>&nbsp; {{ page.item.dimensions }}</p>
+			{% endif %}
+
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" class="itemtext" width="300">
+			{{ content }}	
+			<p>
+			{{ page.date | date_to_string }}
+			<span class="price">
+			{% if page.item.sold %}
+				<span class="sold">såld</span>
+			{% else %}
+				{% if page.item.price %}
+					{{ page.item.price }},-
+				{% endif %}
+			{% endif %}
+			</span>
+			</p>
+		</td>
+	</tr>
 </table>
+
+{% if page.images %}
+<table class="images">
+{% for image in page.images %}
+	{% capture row %}{% cycle 'odd', 'even' %}{% endcapture %}
+	<tr class="{{ row }}">
+		{% if row == 'even' %}				
+			<td class="line" width="180"><b>{{page.item.ref}}.{{ forloop.index }}</b></td>
+		{% endif %}
+		<td colspan="2" width="600" rowspan="2">
+		<a href="{{image.url}}"><img src="{{ image.url | replace_first: '/upload/', '/upload/w_600/' }}" width="600" /></a>
+		</td>
+		{% if row == 'odd' %}
+			<td class="line" width="180"><b>{{page.item.ref}}.{{ forloop.index }}</b></td>
+		{% endif %}
+	</tr>
+	<tr class="{{ row }}" valign="bottom">
+			<td width="180">{% if image.text %}<div class="imgtext">{{ image.text }}</div>{% endif %}</td>
+	</tr>
+{% endfor %}
+</table>
+{% endif %}
 
