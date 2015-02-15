@@ -1,13 +1,12 @@
 ---
-layout: none
+layout: null
 ---
 [
   {% for post in site.posts %}
     {
       "title": "{{ post.title | escape }}",
-      "categories": "{{ post.categories | array_to_sentence_string }}",
-			"theme": "{{ post.theme }}",
-			"image": "{{ post.image }}",
+      "categories": "{{ post.item.kind }}",
+			"image": "{{ post.item.image }}",
       "url": "{{ post.url }}",
       "date": "{{ post.date }}"
     } {% unless forloop.last %},{% endunless %}

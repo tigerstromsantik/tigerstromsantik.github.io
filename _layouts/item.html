@@ -41,24 +41,16 @@ layout: default
 			<h2>{{ page.title }}</h2>
 		</td>
 		<td rowspan="2" valign="top">
-			{% if page.item.designer %}
-			<p class="designer">{{ page.item.designer }}</p>
-			{% endif %}
-			{% if page.item.year %}
-			<p class="year">{{ page.item.year }}</p>
-			{% endif %}
-			{% if page.item.ref %}
-			<p class="ref">{{ page.item.ref }}</p>
-			{% endif %}
-
-			{% if page.item.dimensions %}
-			<p class="dimension"><b>Storlek</b>&nbsp; {{ page.item.dimensions }}</p>
-			{% endif %}
-
+			{% if page.item.designer %}<p class="designer">{{ page.item.designer }}</p>{% endif %}
+			{% if page.item.artist %}<p class="artist">{{ page.item.artist }}</p>{% endif %}
+			{% if page.item.year %}<p class="year">{{ page.item.year }}</p>{% endif %}
+			{% if page.item.ref %}<p class="ref">{{ page.item.ref }}</p>{% endif %}
+			{% if page.item.dimensions %}<p class="dimension"><b>Storlek</b>&nbsp; {{ page.item.dimensions }}</p>{% endif %}
 		</td>
 	</tr>
 	<tr>
 		<td valign="top" class="itemtext" width="300">
+      {% if page.item.desc %}<div class="desc">{{ page.item.desc }}</div>{% endif %}
 			{{ content }}	
 			<p>
 			{{ page.date | date_to_string }}
@@ -67,7 +59,7 @@ layout: default
 				<span class="sold">såld</span>
 			{% else %}
 				{% if page.item.price %}
-					{{ page.item.price }} SEK
+					{{ page.item.price }} <small>SEK</small>
 				{% endif %}
 			{% endif %}
 			</span>

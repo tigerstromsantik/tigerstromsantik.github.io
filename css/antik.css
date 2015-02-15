@@ -60,11 +60,12 @@ a.img, a.img:visited { text-decoration: none; color: black; }
 
 /* list view */
 h3.period { margin: 0; text-transform: none;  clear: right; border-bottom: 1px solid #b78727; margin-top: 1em; width: 600px; }
-table.list { border-spacing: 0px 50px; width: 600px; }
+table.list { border-spacing: 0px; width: 600px; }
 table.list .img { text-align: center; padding-right: 30px; }
 .listtext { font-family: "Libre Baskerville"; font-size: 13px; }
 .listtext p { text-align: justify; }
 .listtext div {  overflow:hidden; float:left; }
+.spacer { height: 50px; }
 
 /* item view */
 #item { margin-top: 50px; clear: right; }
@@ -79,8 +80,11 @@ a.fullsize { cursor: -webkit-zoom-in; cursor: -moz-zoom-in; }
 .itemtext p { text-align: justify; }
 .itemtext p:first-child { margin-top: 0; }
 
-.price { font-size: 15px; float: right; font-family: "Josefin Sans"; font-weight: bold; }
+.price { font-size: 15px; float: right; font-family: "Josefin Sans"; font-weight: bold; clear: right; margin-top: 1em; }
+.price small { font-size: 11px; }
 .sold { color: #AB4B52; }
+.desc { font-size: 17px; color: #b78727; font-weight: bold; font-family: "Josefin Sans"; }
+.date { font-size: 14px; float: right; }
 #more { text-align: center; }
 #more h3 { border-bottom: 1px solid black; }
 

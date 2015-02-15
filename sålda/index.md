@@ -2,7 +2,7 @@
 layout: list
 title: Sålda
 category: []
-periods: ["?"]
+periods: ["*"]
 sold: true
 ---
 
