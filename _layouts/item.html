@@ -6,7 +6,7 @@ layout: default
 <table border="0" cellpadding="5" cellspacing="0" id="item">
 	<tr>
 		<td width="600" valign="top" colspan="2">
-			<a href="{{ page.item.image }}"><img src="{{ page.item.image | replace_first: '/upload/', '/upload/w_600/' }}" alt="{{ page.title }}" width="600" /></a>
+			<a href="{{ page.item.image }}" class="fullsize"><img src="{{ page.item.image | replace_first: '/upload/', '/upload/w_600/' }}" alt="{{ page.title }}" width="600" /></a>
 		</td>
 		<td valign="top" rowspan="3" width="180" id="more">
 			<!-- More of the same artist/designer? -->
@@ -63,11 +63,11 @@ layout: default
 			<p>
 			{{ page.date | date_to_string }}
 			<span class="price">
-			{% if page.item.sold %}
+			{% if page.sold %}
 				<span class="sold">såld</span>
 			{% else %}
 				{% if page.item.price %}
-					{{ page.item.price }},-
+					{{ page.item.price }} SEK
 				{% endif %}
 			{% endif %}
 			</span>
@@ -85,7 +85,7 @@ layout: default
 			<td class="line" width="180"><b>{{page.item.ref}}.{{ forloop.index }}</b></td>
 		{% endif %}
 		<td colspan="2" width="600" rowspan="2">
-		<a href="{{image.url}}"><img src="{{ image.url | replace_first: '/upload/', '/upload/w_600/' }}" width="600" /></a>
+		<a href="{{image.url}}" class="fullsize"><img src="{{ image.url | replace_first: '/upload/', '/upload/w_600/' }}" width="600" /></a>
 		</td>
 		{% if row == 'odd' %}
 			<td class="line" width="180"><b>{{page.item.ref}}.{{ forloop.index }}</b></td>

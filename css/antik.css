@@ -17,7 +17,7 @@ body { max-width: 800px; margin: 0 auto; font-family: "Josefin Sans"; }
 h1, .categories { font-family: "Goudy Bookletter 1911", Quattrocento, "Gentium Book Basic", serif; }
 h2, h3, h4 { font-family: "Libre Baskerville"; text-transform:uppercase; font-weight: normal; }
 
-h1#title { font-size: 42px; margin: 0 auto 0 auto; text-align: center; text-transform:uppercase; font-weight: normal; padding: 20px 0 10px 0; border-bottom: 6px solid #AB4B52; }
+h1#title { font-size: 42px; margin: 0 auto 0 auto; text-align: center; text-transform:uppercase; font-weight: normal; padding: 20px 0 10px 0; border-bottom: 4px solid #AB4B52; }
 h1#title a { text-decoration: none; }
 h1#title a:visited { color: black; }
 h1 { font-size: 19px; font-size: 0.75cm; font-weight: normal; }
@@ -59,9 +59,12 @@ input {margin: 0;}
 a.img, a.img:visited { text-decoration: none; color: black; }
 
 /* list view */
-h3.period { margin: 0; text-transform: none;  clear: right; }
-table.list { border-left: 3px solid #b78727; margin-left: 20px; border-spacing: 30px 50px; }
-table.list .img { text-align: right; }
+h3.period { margin: 0; text-transform: none;  clear: right; border-bottom: 1px solid #b78727; margin-top: 1em; width: 600px; }
+table.list { border-spacing: 0px 50px; width: 600px; }
+table.list .img { text-align: center; padding-right: 30px; }
+.listtext { font-family: "Libre Baskerville"; font-size: 13px; }
+.listtext p { text-align: justify; }
+.listtext div {  overflow:hidden; float:left; }
 
 /* item view */
 #item { margin-top: 50px; clear: right; }
@@ -70,12 +73,13 @@ table.list .img { text-align: right; }
 .line { border-bottom: 1px solid black; }
 .even { text-align: right; }
 .images { border-width: 0; border-spacing: 10px 50px;  }
+a.fullsize { cursor: -webkit-zoom-in; cursor: -moz-zoom-in; }
 
 .itemtext { font-family: "Libre Baskerville"; font-size: 13px; padding-right: 2em; }
 .itemtext p { text-align: justify; }
 .itemtext p:first-child { margin-top: 0; }
 
-.price { font-size: 15px; float: right; }
+.price { font-size: 15px; float: right; font-family: "Josefin Sans"; font-weight: bold; }
 .sold { color: #AB4B52; }
 #more { text-align: center; }
 #more h3 { border-bottom: 1px solid black; }
