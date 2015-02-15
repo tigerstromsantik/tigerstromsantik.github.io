@@ -83,7 +83,7 @@ a.fullsize { cursor: -webkit-zoom-in; cursor: -moz-zoom-in; }
 .price { font-size: 15px; float: right; font-family: "Josefin Sans"; font-weight: bold; clear: right; margin-top: 1em; }
 .price small { font-size: 11px; }
 .sold { color: #AB4B52; }
-.desc { font-size: 17px; color: #b78727; font-weight: bold; font-family: "Josefin Sans"; }
+.desc { font-size: 18px; color: #b78727; font-weight: 400; font-family: "Josefin Sans"; }
 .date { font-size: 14px; float: right; }
 #more { text-align: center; }
 #more h3 { border-bottom: 1px solid black; }
