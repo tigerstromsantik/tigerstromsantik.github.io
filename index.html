@@ -15,6 +15,9 @@ categories:
    path: lampor
    image: http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.5/v1424532269/Fotogenlampa_upmdvo.jpg
    position: 
+ - name: Keramik
+   path: keramik
+   image: http://res.cloudinary.com/tigerstromsantik/image/upload/v1424550896/keramik/Keramik_090.jpg
  - name: Konst
    path: konst
    image: http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.5/v1423508149/367_Sockersk%C3%A5l_rjm0d2.jpg
@@ -23,8 +26,15 @@ categories:
 
 	<table class="categories">
 		<tr>
-		{% for cat in page.categories %}
+		{% for cat in page.categories limit:4 %}
 			<td onclick="location.href='/{{ cat.path }}/'" style="background-image:url({{ cat.image  }}); background-position: {{ cat.position }} ;"><h3><a href="/{{ cat.path }}/">{{ cat.name }}</a></h3></td>
     {% endfor %}
 		</tr>
+
+		<tr>
+		{% for cat in page.categories limit:4 offset:4 %}
+			<td onclick="location.href='/{{ cat.path }}/'" style="background-image:url({{ cat.image  }}); background-position: {{ cat.position }} ;"><h3><a href="/{{ cat.path }}/">{{ cat.name }}</a></h3></td>
+    {% endfor %}
+		</tr>
+
 	</table>

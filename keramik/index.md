@@ -1,7 +1,8 @@
 ---
 layout: list
-title: Lampor
-category: [lampor]
+title: Keramik
+category: [keramik]
 periods: ["?"]
 unknown: okänt tidsperiod
 ---
+
