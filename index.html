@@ -1,40 +1,30 @@
 ---
 layout: default
 title: Tigerström Konst & Antik
+
+categories: 
+ - name: Tavlor
+   path: tavlor
+   image: http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.25/v1423508173/Clara_Montalba_5_qymz68.jpg
+   position: center
+ - name: Möbler
+   path: möbler
+   image: http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.25/v1423508157/Snedklaff_2_zhmsxx.jpg
+   position: -80px -50px
+ - name: Lampor
+   path: lampor
+   image: http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.5/v1424532269/Fotogenlampa_upmdvo.jpg
+   position: 
+ - name: Konst
+   path: konst
+   image: http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.5/v1423508149/367_Sockersk%C3%A5l_rjm0d2.jpg
+   position:
 ---
 
 	<table class="categories">
 		<tr>
-			<td style="background-image:url(http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.25/v1423508157/Snedklaff_2_zhmsxx.jpg); background-position: -2em -1.6cm;"><a href="/möbler/">Möbler</a></td>
-			<td style="background-image:url(http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.25/v1423508173/Clara_Montalba_5_qymz68.jpg)"><a href="/tavlor/">Tavlor</a></td>
-			<td style="background-image:url(http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.45/v1423508152/Empirespegel_Johan_Martin_Berg._dhcmyb.jpg); background-position: -30px -4cm;"><a href="/speglar/">Speglar</a></td>
-		</tr>
-		<tr>
-			<td style="background-image:url()">Belysning</td>
-			<td style="background-image:url(http://res.cloudinary.com/tigerstromsantik/image/upload/w_1.8/v1423508134/Mortel_med_st%C3%B6t_1700-tal_h.17_cm_cqnvwq.jpg)"><a href="/konst/">Konst</a></td>
-			<td style="background-image:url()">Utställning</td>
+		{% for cat in page.categories %}
+			<td onclick="location.href='/{{ cat.path }}/'" style="background-image:url({{ cat.image  }}); background-position: {{ cat.position }} ;"><h3><a href="/{{ cat.path }}/">{{ cat.name }}</a></h3></td>
+    {% endfor %}
 		</tr>
 	</table>
-
-<!--
-  <ul class="posts">
-    {% for post in site.posts %}
-	{% if post.groups contains 'furniture' %}
-      <li>
-		<span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-	  </li>
-    {% endif %}
-    {% endfor %}
-  </ul>
-
-	<h3>Available</h3>
-  <ul class="posts">
-    {% for post in site.posts %}
-	{% unless post.sold %}
-      <li>
-		<span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-	  </li>
-    {% endunless %}
-    {% endfor %}
-  </ul>
--->

@@ -1,7 +1,7 @@
 ---
 layout: list
-title: Speglar
-category: speglar
+title: Lampor
+category: lampor
 periods: ["?"]
 unknown: okänt tidsperiod
 ---

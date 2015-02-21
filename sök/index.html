@@ -4,9 +4,7 @@ layout: default
 
 <h2 class="category">Sök</h2>
 
-<br/>
-<br/>
-<input type="text" id="query" /><input type="button" value="hitta" id="dosearch" />
+<div id="searchbox"><input type="text" id="query" /><input type="button" value="hitta" id="dosearch" /></div>
 
 <div id="matches"></div>
 
@@ -57,7 +55,7 @@ function render(query, data) {
 	var match = 0;	
 	$(data).each(function(idx, item) {
 		if (item.title.search(new RegExp(query, "i")) >= 0) {
-				hitColumns[match % 3].append("<a href='"+decodeURIComponent(item.url)+"' class='img match'><h4>" + item.title +"</h4><img src='" + item.image.replace("/upload/", "/upload/w_300/") + "' width='250' /></a>");
+				hitColumns[match % 3].append("<a href='"+decodeURIComponent(item.url)+"' class='img match'><img src='" + item.image.replace("/upload/", "/upload/w_300/") + "' width='250' /><div class='imgdesc'><h4>" + item.title +"</h4></div></a>");
 				match+=1;
 		}
 	});

@@ -9,7 +9,7 @@ layout: default
 <br/>
 {% for period in page.periods %}
 {% unless period == "*" %}
-<h3 class="period">{% if period != "?" %}{{period}}{% else %}okänt{% endif %}</h3>
+<h3 class="period">{% if period != "?" %}{{period}}{% else %}{{ page.unknown }}{% endif %}</h3>
 {% endunless %}
 
 {% assign limit = page.limit %}

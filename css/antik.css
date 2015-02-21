@@ -1,37 +1,31 @@
-@import url(http://fonts.googleapis.com/css?family=Molengo);
-@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700,700italic);
-@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400italic,400,700italic,700);
-@import url(http://fonts.googleapis.com/css?family=Quattrocento:400,700);
 @import url(http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911);
-@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
-@import url(http://fonts.googleapis.com/css?family=La+Belle+Aurore);
-@import url(http://fonts.googleapis.com/css?family=Habibi);
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Radley:400italic,400);
 
-html {
-	height: 100%; 
-	/* background-color: #D9D0AD; background-image: linear-gradient(#D9D0AD, #E0D7B4); */
-}
+@import url(http://fonts.googleapis.com/css?family=La+Belle+Aurore);
+
+html { height: 100%; }
 body { max-width: 800px; margin: 0 auto; font-family: "Josefin Sans"; }
 
-h1, .categories { font-family: "Goudy Bookletter 1911", Quattrocento, "Gentium Book Basic", serif; }
-h2, h3, h4 { font-family: "Libre Baskerville"; text-transform:uppercase; font-weight: normal; }
+h1 { font-family: "Goudy Bookletter 1911", serif; }
+h2, h3, h4 { font-family: Radley, serif; text-transform:uppercase; font-weight: normal; }
 
 h1#title { font-size: 42px; margin: 0 auto 0 auto; text-align: center; text-transform:uppercase; font-weight: normal; padding: 20px 0 10px 0; border-bottom: 4px solid #AB4B52; }
 h1#title a { text-decoration: none; }
 h1#title a:visited { color: black; }
 h1 { font-size: 19px; font-size: 0.75cm; font-weight: normal; }
-h2 { margin: 0.3em 0; font-size: 18px; }
-h3 { margin: 0.3em 0 1em 0; font-size: 16px;  color: #AB4B52; }
+h2 { margin: 0.3em 0; font-size: 22px; }
+h3 { margin: 0.3em 0 1em 0; font-size: 18px;  color: #AB4B52; }
 h3 i { text-transform: none; }
-h4 { margin: 0.1em 0 1em 0; font-size: 15px; }
+h4 { margin: 0.1em 0 1em 0; font-size: 16px; }
 h5 { font-size: 120%; margin: 0; padding: 5px 1em; text-align: center; }
 
 #footer {	border-top: 1px solid white; padding: 1em 0; margin: 50px 0 0.5cm 0; text-align: center; line-height: 1.6em; border-top: 1px solid black; }
 
-.categories { margin: 1cm auto 0 auto; color: white; font-weight: 400; text-align: center; font-size: 1cm; text-shadow: 2px 2px 2px rgba(50, 50, 50, 0.7); }
-.categories td { height: 250px; width: 250px; background-position: center; background-repeat: no-repeat; }
+.categories { border-spacing: 20px; }
+.categories td { height: 175px; width: 175px; background-position: center; background-repeat: no-repeat; vertical-align: bottom; padding: 0; cursor:pointer; border: 0px solid #b78727; }
 .categories a { color: white; text-decoration: none; }
+.categories h3 { background-color: #AB4B52; margin: 0; padding: 12px 0; text-align: center; font-size: 20px; }
 
 .gul { background-color: #eed58c; border: 0px solid #D9D0AD; } /* F0E6C5; */
 .gul h2 { color: #725d2b; }
@@ -46,37 +40,39 @@ h5 { font-size: 120%; margin: 0; padding: 5px 1em; text-align: center; }
 h2.category { float: right; width: 180px; text-align: center; background-color: #AB4B52; color: white; margin-top: 0; font-size: 20px; }
 h2.category a, h2.category a:visited { text-decoration: none; color: white; }
 
+
 /* search view */
-#query { font-size: 110%; border: 1px solid #ccc; padding: 2px 4px; border-right-width: 0; }
+#searchbox { clear: right; display: inline-block;  font-family: "Josefin Sans"; margin: 2em; }
+#query { font-size: 110%; border: 1px solid #b78727; }
 #dosearch { font-size: 110%; }
-#searchbox { float:right; }
-
-input {margin: 0;}
-.match {width: 250px; padding: 5px; margin-bottom: 10px; display: inline-block; }
-.match img {border: 1px solid white; }
-
-
+input { margin: 0; font-family: "Josefin Sans"; }
+.match {width: 250px; padding: 5px; margin-bottom: 10px; display: block; position: relative; }
+.match img { position: relative; }
+.match .imgdesc { position: absolute; bottom: 8px; background-color: rgba(171, 75, 82, 0.7); display: block; width: 230px; color: white; padding: 10px; }
+.imgdesc h4 { font-family: "Josefin Sans"; }
 a.img, a.img:visited { text-decoration: none; color: black; }
 
 /* list view */
-h3.period { margin: 0; text-transform: none;  clear: right; border-bottom: 1px solid #b78727; margin-top: 1em; width: 600px; }
+h3.period { margin: 0; text-transform: none;  clear: right; border-bottom: 1px solid #b78727; margin-top: 1em; width: 600px;  font-family: "Josefin Sans"; }
 table.list { border-spacing: 0px; width: 600px; }
 table.list .img { text-align: center; padding-right: 30px; }
-.listtext { font-family: "Libre Baskerville"; font-size: 13px; }
+.listtext { font-family: Radley, serif; font-size: 15px; }
 .listtext p { text-align: justify; }
 .listtext div {  overflow:hidden; float:left; }
 .spacer { height: 50px; }
 
 /* item view */
 #item { margin-top: 50px; clear: right; }
-.imgtext { padding-bottom: 1em; font-family: "Libre Baskerville"; font-size: 13px; }
+#more { text-align: center; }
+#more h3 { border-bottom: 1px solid black; }
+.imgtext { padding-bottom: 1em; font-family: Radley, serif; font-size: 13px; }
 .line b { color: #AB4B52; }
 .line { border-bottom: 1px solid black; }
 .even { text-align: right; }
 .images { border-width: 0; border-spacing: 10px 50px;  }
 a.fullsize { cursor: -webkit-zoom-in; cursor: -moz-zoom-in; }
 
-.itemtext { font-family: "Libre Baskerville"; font-size: 13px; padding-right: 2em; }
+.itemtext { font-family: Radley, serif; font-size: 15px; padding-right: 2em; }
 .itemtext p { text-align: justify; }
 .itemtext p:first-child { margin-top: 0; }
 
@@ -85,6 +81,5 @@ a.fullsize { cursor: -webkit-zoom-in; cursor: -moz-zoom-in; }
 .sold { color: #AB4B52; }
 .desc { font-size: 18px; color: #b78727; font-weight: 400; font-family: "Josefin Sans"; }
 .date { font-size: 14px; float: right; }
-#more { text-align: center; }
-#more h3 { border-bottom: 1px solid black; }
+.artist, .designer { font-family: "La Belle Aurore"; font-size: 18px; }
 

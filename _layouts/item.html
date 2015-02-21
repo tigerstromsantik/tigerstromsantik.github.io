@@ -11,7 +11,7 @@ layout: default
 		<td valign="top" rowspan="3" width="180" id="more">
 			<!-- More of the same artist/designer? -->
 			{% if page.item.artist %}
-				<h3><i>{{page.item.artist}}</i></h3>
+				<h3 class="artist"><i>{{page.item.artist}}</i></h3>
 			  {% for post in site.posts %}
 			    {% if page.item.artist == post.item.artist and page.url != post.url %}
 			<a href="{{ post.url }}" class="img">
