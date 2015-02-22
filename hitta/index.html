@@ -35,7 +35,7 @@ function init() {
 	if (q.val() != "") {
 		search(q.val());
 	} else {
-		if (qParam != "") {
+		if (qParam) {
 		  q.val(qParam);
       search(qParam);
 		} else {

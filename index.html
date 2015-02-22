@@ -24,17 +24,34 @@ categories:
    position:
 ---
 
+
+
 	<table class="categories">
-		<tr>
+		<tr><td colspan="4"><h2 class="sec">Kategorier</h2></td></tr>
+		<tr class="square">
 		{% for cat in page.categories limit:4 %}
-			<td onclick="location.href='/{{ cat.path }}/'" style="background-image:url({{ cat.image  }}); background-position: {{ cat.position }} ;"><h3><a href="/{{ cat.path }}/">{{ cat.name }}</a></h3></td>
+			<td onclick="location.href='/kategori/{{ cat.path }}/'" style="background-image:url({{ cat.image  }}); background-position: {{ cat.position }} ;"><h3><a href="/kategori/{{ cat.path }}/">{{ cat.name }}</a></h3></td>
     {% endfor %}
 		</tr>
 
-		<tr>
+		<tr class="square">
 		{% for cat in page.categories limit:4 offset:4 %}
-			<td onclick="location.href='/{{ cat.path }}/'" style="background-image:url({{ cat.image  }}); background-position: {{ cat.position }} ;"><h3><a href="/{{ cat.path }}/">{{ cat.name }}</a></h3></td>
+			<td onclick="location.href='/kategori/{{ cat.path }}/'" style="background-image:url({{ cat.image  }}); background-position: {{ cat.position }} ;"><h3><a href="/kategori/{{ cat.path }}/">{{ cat.name }}</a></h3></td>
     {% endfor %}
 		</tr>
 
+		<tr><td colspan="4"><h2 class="sec">Register</h2></td></tr>
+		<tr>
+			<td colspan="2">
+				<ul class=leaders>
+					<li><a href="/hitta/"><h4>Sök</h4> <span>igenom {{ site.posts | size }} objekter</span></a></li>
+					<li><a href="/nya/"><h4>Ny</h4> <span>{{ site.posts[0].date | date: "%F" }}</span></a></li>
+					<li><a href="/sålda/"><h4>Såld</h4> <span></span></a></li>
+				</ul>
+			</td>
+			<td colspan="2"></td>
+		</tr>
 	</table>
+
+
+

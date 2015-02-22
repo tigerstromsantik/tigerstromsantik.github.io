@@ -7,6 +7,8 @@
 html { height: 100%; }
 body { max-width: 800px; margin: 0 auto; font-family: "Josefin Sans"; }
 
+hr { border: 0; border-top: 1px solid black; }
+
 h1 { font-family: "Goudy Bookletter 1911", serif; }
 h2, h3, h4 { font-family: Radley, serif; text-transform:uppercase; font-weight: normal; }
 
@@ -20,26 +22,27 @@ h3 i { text-transform: none; }
 h4 { margin: 0.1em 0 1em 0; font-size: 16px; }
 h5 { font-size: 120%; margin: 0; padding: 5px 1em; text-align: center; }
 
-#footer {	border-top: 1px solid white; padding: 1em 0; margin: 50px 0 0.5cm 0; text-align: center; line-height: 1.6em; border-top: 1px solid black; }
-
-.categories { border-spacing: 20px; }
-.categories td { height: 175px; width: 175px; background-position: center; background-repeat: no-repeat; vertical-align: bottom; padding: 0; cursor:pointer; border: 0px solid #b78727; }
-.categories a { color: white; text-decoration: none; }
-.categories h3 { background-color: #AB4B52; margin: 0; padding: 12px 0; text-align: center; font-size: 20px; }
-
-.gul { background-color: #eed58c; border: 0px solid #D9D0AD; } /* F0E6C5; */
-.gul h2 { color: #725d2b; }
-.gul .thumb { background-color: #e2c780; }
-.turkos { background-color: #bcd0c6; border: 0px solid #D9D0AD; } /* F0E6C5; */
-.turkos h2 { color: #2d3734; }
-.turkos .thumb { background-color: #acc0b6; }
-.rosa { background-color: #EDD8D9; background-image: url(http://sandbergwallpaper.se/wp-content/uploads/2014/12/780-09_image2.jpg); }
-.rosa h2 { color: #806668; }
-.rosa .thumb { background-color: #E5D0D1; }
-
+h2.sec { color: #b78727; text-transform:none; margin: 1em 0 0 0; }
 h2.category { float: right; width: 180px; text-align: center; background-color: #AB4B52; color: white; margin-top: 0; font-size: 20px; }
 h2.category a, h2.category a:visited { text-decoration: none; color: white; }
 
+#footer {	border-top: 1px solid white; padding: 1em 0; margin: 50px 0 0.5cm 0; text-align: center; line-height: 1.6em; border-top: 1px solid black; }
+
+/* home page */
+.categories { border-spacing: 20px; }
+.categories .square td { height: 175px; width: 175px; background-position: center; background-repeat: no-repeat; vertical-align: bottom; padding: 0; cursor:pointer; border: 0px solid #b78727; }
+.categories .square a { color: white; text-decoration: none; }
+.categories h3 { background-color: #AB4B52; margin: 0; padding: 12px 0; text-align: center; font-size: 20px; }
+
+ul.leaders { max-width: 380px; padding: 0; overflow-x: hidden; list-style: none; font-family: Radley; margin: 0; } 
+ul.leaders li:before { float: left; width: 0; white-space: nowrap; content:
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "; }
+ul.leaders h4 { padding-right: 0.33em; background: white; display: inline-block; margin: 0; }
+ul.leaders span { float: right; padding-left: 0.33em; background: white; }
+ul.leaders a, ul.leaders a:visited { color: black; }
 
 /* search view */
 #searchbox { clear: right; display: inline-block;  font-family: "Josefin Sans"; margin: 2em; }
@@ -82,4 +85,18 @@ a.fullsize { cursor: -webkit-zoom-in; cursor: -moz-zoom-in; }
 .desc { font-size: 18px; color: #b78727; font-weight: 400; font-family: "Josefin Sans"; }
 .date { font-size: 14px; float: right; }
 .artist, .designer { font-family: "La Belle Aurore"; font-size: 18px; }
+
+/* colors */
+.gul { background-color: #eed58c; border: 0px solid #D9D0AD; } /* F0E6C5; */
+.gul h2 { color: #725d2b; }
+.gul .thumb { background-color: #e2c780; }
+.turkos { background-color: #bcd0c6; border: 0px solid #D9D0AD; } /* F0E6C5; */
+.turkos h2 { color: #2d3734; }
+.turkos .thumb { background-color: #acc0b6; }
+.rosa { background-color: #EDD8D9; background-image: url(http://sandbergwallpaper.se/wp-content/uploads/2014/12/780-09_image2.jpg); }
+.rosa h2 { color: #806668; }
+.rosa .thumb { background-color: #E5D0D1; }
+
+.blue h1#title { border-bottom-color: #708090; }
+.blue h2.category { background-color: #708090; }
 
