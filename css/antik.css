@@ -85,6 +85,12 @@ a.fullsize { cursor: -webkit-zoom-in; cursor: -moz-zoom-in; }
 .desc { font-size: 18px; color: #b78727; font-weight: 400; font-family: "Josefin Sans"; }
 .date { font-size: 14px; float: right; }
 .artist, .designer { font-family: "La Belle Aurore"; font-size: 18px; }
+h1.artist { font-size: 42px; text-align: center; }
+
+/* artist view */
+.two-column { width: 100%; border-spacing: 0 40px; }
+.two-column td.img { text-align: center; }
+.two-column td.right { text-align: right; }
 
 /* colors */
 .gul { background-color: #eed58c; border: 0px solid #D9D0AD; } /* F0E6C5; */

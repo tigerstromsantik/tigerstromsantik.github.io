@@ -1,3 +1,42 @@
 ---
 layout: default
 ---
+
+<h1 class="artist">{{ page.title }}</h1>
+
+{{ content }}
+
+{% assign tr = true %}
+<table class="two-column">
+{% for post in site.posts %}
+ {% if post.item.artist == page.person or post.item.designer == page.person %}
+	{% if tr %}
+	<tr>
+  {% endif %}
+		<td class="img" rowspan="2" width="300" valign="top">
+			<a href="{{ post.url }}"><img src="{{ post.item.image | replace_first: '/upload/', '/upload/w_300,h_300,c_fit/' }}" /></a>
+		</td>
+	{% if tr %}
+	  <td>
+			<h4>{{ post.title }}</h4>
+			{% if post.item.desc %}<div class="desc">{{ post.item.desc }}</div>{% endif %}
+			</td>
+  {% else %}
+	</tr>
+  <tr><td class="right" valign="bottom">
+		<h4>{{ post.title }}</h4>
+		{% if post.item.desc %}<div class="desc">{{ post.item.desc }}</div>{% endif %}
+	</td></tr>
+  {% endif %}
+	{% if tr %}
+   {% assign tr = false %}
+  {% else %}
+   {% assign tr = true %}
+  {% endif %}
+ {% endif %}
+{% endfor %}
+{% if tr %}
+</tr>
+{% endif %}
+</table>
+
