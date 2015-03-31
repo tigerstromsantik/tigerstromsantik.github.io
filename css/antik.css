@@ -40,7 +40,7 @@ ul.leaders li:before { float: left; width: 0; white-space: nowrap; font-weight: 
  ". . . . . . . . . . . . . . . . . . . . "
  ". . . . . . . . . . . . . . . . . . . . "
  ". . . . . . . . . . . . . . . . . . . . "; }
-ul.leaders h4 { padding-right: 0.33em; background: white; display: inline-block; margin: 0; font-family: font-family: "Goudy Bookletter 1911", serif; font-size: 15px;}
+ul.leaders h4 { padding-right: 0.33em; background: white; display: inline-block; margin: 0; font-family: font-family: "Goudy Bookletter 1911", serif; font-size: 15px; text-transform: capitalize;}
 ul.leaders span { float: right; padding-left: 0.33em; background: white; }
 ul.leaders a, ul.leaders a:visited { color: black; }
 
