@@ -1,7 +1,7 @@
 ---
 layout: list
-title: Konst
-category: [konst]
+title: Textilier
+category: [textilier]
 periods: ["?"]
 unknown: okänt tidsperiod
 ---

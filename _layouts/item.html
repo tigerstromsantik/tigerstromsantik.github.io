@@ -41,8 +41,24 @@ layout: default
 			<h2>{{ page.title }}</h2>
 		</td>
 		<td rowspan="2" valign="top">
-			{% if page.item.designer %}<p class="designer">{{ page.item.designer }}</p>{% endif %}
-			{% if page.item.artist %}<p class="artist">{{ page.item.artist }}</p>{% endif %}
+			{% if page.item.designer %}<p class="designer">
+				{% assign url = false %}
+				{% for designer in site.categories["designer"] %}
+					{% if designer.person == page.item.designer %}
+							{% assign url = designer.url %}
+					{% endif %}
+				{% endfor %}
+				{% if url %}<a href="{{url}}">{% endif %}	{{ page.item.designer }} {% if url %}</a>{% endif %}
+			</p>{% endif %}
+			{% if page.item.artist %}<p class="artist">
+				{% assign url = false %}
+				{% for artist in site.categories["konstnär"] %}
+					{% if artist.person == page.item.artist %}
+							{% assign url = artist.url %}
+					{% endif %}
+				{% endfor %}
+				{% if url %}<a href="{{url}}">{% endif %}	{{ page.item.artist }} {% if url %}</a>{% endif %}
+			</p>{% endif %}
 			{% if page.item.year %}<p class="year">{{ page.item.year }}</p>{% endif %}
 			{% if page.item.ref %}<p class="ref">{{ page.item.ref }}</p>{% endif %}
 			{% if page.item.dimensions %}<p class="dimension"><b>Storlek</b>&nbsp; {{ page.item.dimensions }}</p>{% endif %}

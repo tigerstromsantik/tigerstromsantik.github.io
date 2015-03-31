@@ -1,7 +1,7 @@
 ---
 layout: list
-title: Konst
-category: [konst]
+title: Mattor
+category: [mattor]
 periods: ["?"]
 unknown: okänt tidsperiod
 ---

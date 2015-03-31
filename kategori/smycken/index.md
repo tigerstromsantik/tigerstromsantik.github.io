@@ -1,7 +1,7 @@
 ---
 layout: list
-title: Lampor
-category: [lampor]
+title: Smycken
+category: [smycken]
 periods: ["?"]
 unknown: okänt tidsperiod
 ---

@@ -1,7 +1,8 @@
 ---
 layout: list
-title: Konst
-category: [konst]
+title: Porslin & Keramik
+category: [porslin, keramik]
 periods: ["?"]
 unknown: okänt tidsperiod
 ---
+

@@ -1,7 +1,8 @@
 ---
 layout: list
-title: Konst
-category: [konst]
+title: Mattor & Textilier
+category: [mattor, textilier]
 periods: ["?"]
 unknown: okänt tidsperiod
 ---
+

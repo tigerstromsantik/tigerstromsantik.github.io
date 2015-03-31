@@ -1,7 +1,9 @@
 ---
 layout: list
-title: Konst
-category: [konst]
+title: Designer
+category: [designer]
 periods: ["?"]
 unknown: okänt tidsperiod
 ---
+
+# Designer

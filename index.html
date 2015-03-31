@@ -3,25 +3,45 @@ layout: default
 title: Tigerström Konst & Antik
 
 categories: 
- - name: Tavlor
-   path: tavlor
-   image: http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.25/v1423508173/Clara_Montalba_5_qymz68.jpg
-   position: center
- - name: Möbler
-   path: möbler
-   image: http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.25/v1423508157/Snedklaff_2_zhmsxx.jpg
-   position: -80px -50px
- - name: Lampor
-   path: lampor
-   image: http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.5/v1424532269/Fotogenlampa_upmdvo.jpg
-   position: 
- - name: Keramik
-   path: keramik
-   image: http://res.cloudinary.com/tigerstromsantik/image/upload/v1424550896/keramik/Keramik_090.jpg
  - name: Konst
    path: konst
+   subcategories: [konst, tavlor]
+   image: http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.2/v1427802101/home/col022.jpg
+   position: 0 0
+ - name: Möbler & Belysning
+   path: möbler-speglar-belysning
+   subcategories: [möbler, belysning]
+   image: http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.25/v1423508157/Snedklaff_2_zhmsxx.jpg
+   position: -80px -50px
+ - name: Mattor & Textilier
+   path: mattor-textilier
+   subcategories: [mattor, textilier]
+   image: 
+   position: 
+ - name: Silver, Smycken, Ur
+   path: silver-smycken-ur
+   subcategories: [silver, smycken, ur]
+   image: http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.25/v1427802109/home/col005.jpg
+   position: center
+ - name: Porslin & Keramik
+   path: porslin-keramik
+   subcategories: [porslin, keramik]
+   image: http://res.cloudinary.com/tigerstromsantik/image/upload/v1424550896/keramik/Keramik_090.jpg
+ - name: Glas
+   path: glas
+   subcategories: [glas]
+   image: http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.2/v1427802099/home/col011.jpg
+   position: 0 0
+ - name: Övrigt
+   path: övrigt
+   subcategories: [övrigt]
    image: http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.8/v1423508136/Punu_mask_afrika_d9anrw.jpg
    position: "-20px -130px"
+ - name: Retro
+   path: retro
+   subcategories: [retro]
+   image: http://res.cloudinary.com/tigerstromsantik/image/upload/w_0.28/v1427802112/home/col018.jpg
+   position: center
 ---
 
 
@@ -34,9 +54,33 @@ categories:
     {% endfor %}
 		</tr>
 
+		<tr>
+		{% for cat in page.categories limit:4 %}
+			<td valign="top">
+				<ul class=leaders>
+				{% for sub in cat.subcategories %}
+					<li><a href="/kategori/{{sub}}/"><h4>{{sub}}</h4> <span>{{ site.categories[sub] | size }}</span></a></li>
+				{% endfor %}
+				</ul>
+			</td>
+    {% endfor %}
+		</tr>
+
 		<tr class="square">
 		{% for cat in page.categories limit:4 offset:4 %}
 			<td onclick="location.href='/kategori/{{ cat.path }}/'" style="background-image:url({{ cat.image  }}); background-position: {{ cat.position }} ;"><h3><a href="/kategori/{{ cat.path }}/">{{ cat.name }}</a></h3></td>
+    {% endfor %}
+		</tr>
+
+		<tr>
+		{% for cat in page.categories limit:4 offset:4 %}
+			<td valign="top">
+				<ul class=leaders>
+				{% for sub in cat.subcategories %}
+					<li><a href="/kategori/{{sub}}/"><h4>{{sub}}</h4> <span>{{ site.categories[sub] | size }}</span></a></li>
+				{% endfor %}
+				</ul>
+			</td>
     {% endfor %}
 		</tr>
 

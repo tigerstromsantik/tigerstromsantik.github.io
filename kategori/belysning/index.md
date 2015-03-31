@@ -1,7 +1,7 @@
 ---
 layout: list
-title: Konst
-category: [konst]
+title: Belysning
+category: [belysning]
 periods: ["?"]
 unknown: okänt tidsperiod
 ---

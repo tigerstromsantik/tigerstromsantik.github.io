@@ -1,7 +1,6 @@
 ---
 layout: list
-title: Konst
-category: [konst]
-periods: ["?"]
+title: Övrigt
+category: [övrigt]
 unknown: okänt tidsperiod
 ---

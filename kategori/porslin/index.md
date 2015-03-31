@@ -1,7 +1,7 @@
 ---
 layout: list
-title: Konst
-category: [konst]
+title: Porslin
+category: [porslin]
 periods: ["?"]
 unknown: okänt tidsperiod
 ---

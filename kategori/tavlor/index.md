@@ -1,7 +1,7 @@
 ---
 layout: list
 title: Tavlor
-category: tavlor
+category: [tavlor]
 periods: [1950, 1960, "?"]
 unknown: okänt tidsperiod
 ---

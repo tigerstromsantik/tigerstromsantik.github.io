@@ -1,7 +1,8 @@
 ---
 layout: list
-title: Konst
-category: [konst]
+title: Silver, Smycken & Ur
+category: [silver, smycken, ur]
 periods: ["?"]
 unknown: okänt tidsperiod
 ---
+

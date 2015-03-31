@@ -1,7 +1,9 @@
 ---
 layout: list
-title: Konst
-category: [konst]
+title: Konstnär
+category: [konstnär]
 periods: ["?"]
 unknown: okänt tidsperiod
 ---
+
+# Konstnär

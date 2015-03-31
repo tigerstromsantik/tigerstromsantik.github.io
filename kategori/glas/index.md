@@ -1,7 +1,7 @@
 ---
 layout: list
-title: Konst
-category: [konst]
+title: Glas
+category: [glas]
 periods: ["?"]
 unknown: okänt tidsperiod
 ---

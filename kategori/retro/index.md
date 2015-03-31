@@ -1,7 +1,6 @@
 ---
 layout: list
-title: Konst
-category: [konst]
-periods: ["?"]
+title: Retro
+category: [retro]
 unknown: okänt tidsperiod
 ---

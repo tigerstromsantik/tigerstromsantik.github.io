@@ -1,7 +1,7 @@
 ---
 layout: list
 title: Möbler
-category: [möbler, speglar]
+category: [möbler]
 periods: ["?"]
 unknown: okänt tidsperiod
 ---
