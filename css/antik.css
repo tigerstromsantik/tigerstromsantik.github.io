@@ -35,7 +35,7 @@ h2.category a, h2.category a:visited { text-decoration: none; color: white; }
 .categories h3 { background-color: #AB4B52; margin: 0; padding: 12px 0; text-align: center; font-size: 14px; }
 
 ul.leaders { max-width: 380px; padding: 0; overflow-x: hidden; list-style: none; font-family: Radley; margin: 0; } 
-ul.leaders li:before { float: left; width: 0; white-space: nowrap; content:
+ul.leaders li:before { float: left; width: 0; white-space: nowrap; font-weight: 400; color: #777; content:
  ". . . . . . . . . . . . . . . . . . . . "
  ". . . . . . . . . . . . . . . . . . . . "
  ". . . . . . . . . . . . . . . . . . . . "
