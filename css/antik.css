@@ -106,3 +106,7 @@ h1.artist { font-size: 42px; text-align: center; }
 .blue h1#title { border-bottom-color: #708090; }
 .blue h2.category { background-color: #708090; }
 
+table.vlines { border-spacing: 0; }
+table.vlines td { border-left: 1px solid #b78727; padding: 2px 5px; }
+table.vlines tr:hover td { background-color: #b78727; }
+table.vlines a { text-decoration: none; }
