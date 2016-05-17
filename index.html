@@ -59,7 +59,13 @@ categories:
 			<td valign="top">
 				<ul class=leaders>
 				{% for sub in cat.subcategories %}
-					<li><a href="/kategori/{{sub}}/"><h4>{{sub}}</h4> <span>{{ site.categories[sub] | size }}</span></a></li>
+					{% assign counter = 0 %}
+					{% for article in site.categories[sub] %}
+						{% unless article.sold %}
+							{% assign counter = counter | plus: 1 %}
+						{% endunless %}
+					{% endfor %}
+					<li><a href="/kategori/{{sub}}/"><h4>{{sub}}</h4> <span>{{counter}}</span></a></li>
 				{% endfor %}
 				</ul>
 			</td>
@@ -77,7 +83,13 @@ categories:
 			<td valign="top">
 				<ul class=leaders>
 				{% for sub in cat.subcategories %}
-					<li><a href="/kategori/{{sub}}/"><h4>{{sub}}</h4> <span>{{ site.categories[sub] | size }}</span></a></li>
+					{% assign counter = 0 %}
+					{% for article in site.categories[sub] %}
+						{% unless article.sold %}
+							{% assign counter = counter | plus: 1 %}
+						{% endunless %}
+					{% endfor %}
+					<li><a href="/kategori/{{sub}}/"><h4>{{sub}}</h4> <span>{{counter}}</span></a></li>
 				{% endfor %}
 				</ul>
 			</td>
